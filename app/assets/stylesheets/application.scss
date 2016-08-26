@@ -1,0 +1,155 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ */
+ 
+ @import "bootstrap-sprockets";
+ @import "bootstrap";
+ 
+ /****Start application.html.erb styles****/
+ html, body {
+   height: 100vh;
+   /*For sticky footer html and body elements cannot have padding or margins*/
+ }
+ 
+ #wrap {
+  min-height: 100%;
+  height: auto;
+  /* Negative indent footer by its height */
+  margin: 0 auto -60px;
+  /* Pad bottom by footer height */
+  padding: 0 0 60px;
+}
+ 
+ .navbar {
+	 font-family: 'Montserrat', sans-serif;
+	 margin-top: 1em;
+	 border: none;
+}
+
+.navbar-default .navbar-collapse, .navbar-default .navbar-form {
+  background-color: white;
+	color: black;
+}
+
+.navbar-default {
+	.navbar-brand,
+	.navbar-nav>li>a {
+    color: black;
+	}
+	.navbar-brand {
+		font-weight: 700;
+		font-size: 1.25em;
+		letter-spacing: 4px;
+	}
+	.navbar-brand:hover {
+	  color: #99ebff;
+	  background: black;
+	}
+}
+
+.container-fluid {
+	background-color: #fff;
+}
+
+.navbar-toggle {
+	border: none;
+}
+
+.icon-bar {
+	// color: black;
+}
+
+.navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover {
+  background-color: #fff;
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: black;
+}
+
+/* Set the fixed height of the footer here */
+#footer {
+  height: 80px;
+  background-color: #99ebff;
+  border-top: 1px solid black;
+}
+
+.credits {
+  text-align: center;
+}
+
+/****End application.html.erb styles****/
+
+
+
+
+
+
+
+
+/****Start home.html.erb styles****/
+
+#home-wrap {
+  margin-bottom: 300px;
+  margin-top: 100px;
+}
+
+.jumbotron-wrap {
+  background-image: url(./soc_media.jpg);
+  background-attachment:fixed;
+  background-size:contain;
+}
+
+.jumbotron-home {
+  height:300px;
+}
+
+#jumbo-home-background {
+  background-color:rgba(250,250,250,0.5);
+}
+
+.jumbo-text h1 {
+  font-size: 100px;
+  line-height: 1;
+  text-align: center;
+  z-index: 2;
+}
+
+.jumbo-text .lead-home {
+  font-size: 24px;
+  line-height: 1.25;
+  text-align: center;
+}
+/****End home.html.erb styles****/
+
+
+
+
+
+
+
+
+
+/****Start about.html.erb styles****/
+
+.jumbo-about {
+  height: 400px;
+  background: #fff;
+}
+
+.jumbo-about {
+  text-align: center;
+}
+
+
+
+/****End about.html.erb styles****/
