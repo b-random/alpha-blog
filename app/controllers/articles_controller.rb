@@ -1,4 +1,9 @@
 class ArticlesController < ApplicationController
+  
+  def show
+    @article = Article.find(params[:id])
+  end
+  
   def new
     @article = Article.new
   end
@@ -8,7 +13,13 @@ class ArticlesController < ApplicationController
     #This displays the params hash data in the browser
     @article = Article.new(article_params)
     #pulls the specified attributes from params with private method from bottom of page 
-    @article.save
+    if @article.save
+      flash[:notice] = "Article was successfully created"
+      redirect_to article_path(@article)
+    else
+      render :new 
+      #could also be 'new'
+    end
   end
   
   
