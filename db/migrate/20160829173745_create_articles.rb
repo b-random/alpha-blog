@@ -5,3 +5,4 @@ class CreateArticles < ActiveRecord::Migration
     end
   end
 end
+#adds title attribute of string data

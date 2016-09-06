@@ -39,12 +39,12 @@
       
       <% flash.each do |name, msg| %>
         <ul>
-          <li><%= msg %></li>
+          <li style="color:blue"><%= msg %></li>
         </ul>
       <% end %>
       <!--this flash block will render flash messages from views and partials in the app wrapper-->
       
-      <%= yield %>
+      <%= yield %> <!--views render here-->
       
     </div>  
     

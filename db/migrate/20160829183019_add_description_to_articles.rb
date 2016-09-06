@@ -5,3 +5,4 @@ class AddDescriptionToArticles < ActiveRecord::Migration
     add_column :articles, :updated_at, :datetime
   end
 end
+#adds description attr of longer string data + date and time

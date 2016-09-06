@@ -21,3 +21,4 @@ ActiveRecord::Schema.define(version: 20160829183019) do
   end
 
 end
+#offers current snapshot of each db table
