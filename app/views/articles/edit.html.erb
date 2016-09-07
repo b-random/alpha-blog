@@ -1,4 +1,4 @@
-<h2>Create an article</h2>
+<h2>Edit an article</h2>
 
 <% if @article.errors.any? %>
 <h5 style="color:red">The following error(s) prevented the article from being created</h5>
@@ -23,6 +23,6 @@
     <%= f.submit %>
   </p> 
 <% end %>
-<!--articles/new.html.erb form.  This data stored in params and sent through CREATE action via POST-->
+<!--articles/edit.html.erb form.  Edit this data, from params and submitted via PATCH-->
 
 <%= link_to "Back to articles listing", articles_path %>
