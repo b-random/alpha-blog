@@ -1,28 +1,4 @@
 <h2>Create an article</h2>
 
-<% if @article.errors.any? %>
-<h5 style="color:red">The following error(s) prevented the article from being created</h5>
-  <% @article.errors.full_messages.each do |msg| %>
-   <li><%= msg %></li>
-  <% end %>
-<% end %>
-<!--if errors occur based on validations, will return those errors as message-->
+<%= render 'form' %>
 
-
-
-<%= form_for @article do |f| %>
-  <p>
-    <%= f.label :title %><br/> <!--line breaks for for layout-->
-    <%= f.text_field :title %>
-  </p>
-  <p>
-    <%= f.label :description %><br/> <!--line breaks for for layout-->
-    <%= f.text_area :description %>
-  </p>
-  <p>
-    <%= f.submit %>
-  </p> 
-<% end %>
-<!--articles/new.html.erb form.  This data stored in params and sent through CREATE action via POST-->
-
-<%= link_to "Back to articles listing", articles_path %>
