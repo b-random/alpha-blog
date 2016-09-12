@@ -10,6 +10,7 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  */
+ $navbar-default-bg: orange;
  
  @import "bootstrap-sprockets";
  @import "bootstrap";
@@ -30,62 +31,37 @@
   padding: 0 0 60px;
 }
  
- .navbar {
-	 font-family: 'Montserrat', sans-serif;
-	 margin-top: 1em;
-	 border: none;
-}
+#logo {
+  float: left;
+  font-size: 1.7em;
+  color: #fff;
+  letter-spacing: -2px;
+} 
 
-.navbar-default .navbar-collapse, .navbar-default .navbar-form {
-  background-color: white;
-	color: black;
-}
-
-.navbar-default {
-	.navbar-brand,
-	.navbar-nav>li>a {
-    color: black;
-	}
-	.navbar-brand {
-		font-weight: 700;
-		font-size: 1.25em;
-		letter-spacing: 4px;
-	}
-	.navbar-brand:hover {
-	  color: #99ebff;
-	  background: black;
-	}
-}
-
-.container-fluid {
-	background-color: #fff;
-}
-
-.navbar-toggle {
-	border: none;
-}
-
-.icon-bar {
-	// color: black;
-}
-
-.navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover {
-  background-color: #fff;
-}
-
-.navbar-default .navbar-toggle .icon-bar {
-  background-color: black;
-}
 
 /* Set the fixed height of the footer here */
 #footer {
   height: 80px;
-  background-color: #99ebff;
+  background-color: $navbar-default-bg;
   border-top: 1px solid black;
 }
 
-.credits {
+.credits p {
   text-align: center;
+}
+
+.fp1 {
+  color: #fff;
+  margin-top: 8px;
+}
+
+.fp2 {
+  text-decoration: none;
+  color: #fff;
+}
+
+.fp2:hover {
+  text-decoration: none;
 }
 
 /****End application.html.erb styles****/
@@ -112,23 +88,39 @@
 
 .jumbotron-home {
   height:300px;
+  text-align: center;
 }
 
 #jumbo-home-background {
   background-color:rgba(250,250,250,0.5);
 }
 
-.jumbo-text h1 {
+.jumbo-text .jumbo-one  {
   font-size: 100px;
   line-height: 1;
   text-align: center;
   z-index: 2;
+  letter-spacing: -10px;
+}
+
+.jumbo-text, .jumbo-two {
+  text-align: center;
+  font-weight: bold;
 }
 
 .jumbo-text .lead-home {
   font-size: 24px;
   line-height: 1.25;
   text-align: center;
+}
+
+.home-jumbo {
+  background-color: #ff8c69;
+  font-size: 1.7em;
+}
+
+.home-jumbo:hover {
+  background-color: $navbar-default-bg;
 }
 /****End home.html.erb styles****/
 
