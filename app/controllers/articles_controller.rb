@@ -23,7 +23,7 @@ class ArticlesController < ApplicationController
     @article = Article.new(article_params)
     #pulls the specified attributes from params with private method from bottom of page 
     if @article.save
-      flash[:notice] = "Article was successfully created"
+      flash[:info] = "Article was successfully created"
       redirect_to article_path(@article)
     else
       render :new 
@@ -34,7 +34,7 @@ class ArticlesController < ApplicationController
   def update
     set_article
     if @article.update(article_params)
-      flash[:notice] = "Article was successfully updated"
+      flash[:info] = "Article was successfully updated"
       redirect_to article_path(@article)
     else
       render :edit
@@ -44,7 +44,7 @@ class ArticlesController < ApplicationController
   def destroy
     set_article
     @article.destroy
-    flash[:notice] = "Article was successfully deleted"
+    flash[:danger] = "Article was successfully deleted"
     redirect_to articles_path
   end
   

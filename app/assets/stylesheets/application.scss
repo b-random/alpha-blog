@@ -126,12 +126,6 @@
 
 
 
-
-
-
-
-
-
 /****Start about.html.erb styles****/
 
 .jumbo-about {
@@ -146,3 +140,20 @@
 
 
 /****End about.html.erb styles****/
+
+
+
+/****Start articles show.html.erb styles****/
+
+.article-actions {
+  border-top: 1px solid orange;
+  padding-top: 5px;
+}
+
+.description {
+  margin-top: 0;
+}
+
+
+/****End articles show.html.erb styles****/
+

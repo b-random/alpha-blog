@@ -1,25 +1,4 @@
-<% if @article.errors.any? %>
-  <div class="row">
-    <div class="col-xs-8 col-xs-offset-2">
-      <div class="panel panel-danger"><!--sets red alert color-->
-        <div class="panel-heading">
-          <h2 class="panel-title"> 
-            <%= pluralize(@article.errors.count, "error") %><!--method to display 'error' or 'errors' based on count-->
-            Prohibited this article from being saved: <!--message header-->
-          </h2>
-          <div class="panel-body"><!--block body/ main-->
-            <ul>
-              <% @article.errors.full_messages.each do |msg| %>
-                <li><%= msg %></li>
-              <% end %>
-            </ul>
-          </div>  
-        </div>
-      </div>
-    </div>
-  </div>
-<% end %>  
-<!--if errors occur based on validations, will return those errors as message-->
+<%= render "share/errors", {obj: @article} %>
 
 
 <div class="row">
