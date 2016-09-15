@@ -1,20 +1,31 @@
-<h3>Articles</h3>
+<h3 align="center">Articles</h3>
 
-<p><%= link_to "Create new article", new_article_path %></p>
 
-<table>
-  <tr>
-    <th>Title</th>
-    <th>Description</th>
-  </tr>
-  
-  <% @articles.each do |article| %>
-  <tr>
-    <td width="350px"><%= article.title%></td>
-    <td width="600px"><%= article.description%></td>
-    <td width="40px"><%= link_to "Edit", edit_article_path(article) %></td> 
-    <td width="50px"><%= link_to "Show", article_path(article) %></td>
-    <td><%= link_to "Delete", article_path(article), method: :delete, data: { confirm: "Are you sure?" } %></td>
-  </tr>
-  <% end %>
-</table>
+<% @articles.each do |article| %>
+  <div class="row">
+    <div class="col-xs-8 col-xs-offset-2">
+      <div class="well well-lg">
+        <div class="article-title">
+          <p><b>Title: </b><%= link_to article.title, article_path(article) %></p>
+        </div>
+        <div class="article-body">
+          <p><b>Description: </b><%= truncate(article.description, length: 100) %></p> <!--truncate displays the amount of characters specified by length-->
+        </div>  
+        <div class="article-actions">
+          <%= link_to "Edit", edit_article_path(article), class: "btn btn-xs btn-primary" %>
+          <%= link_to "Delete", article_path(article), method: :delete, 
+                      data: { confirm: "Are you sure?" },
+                      class: "btn btn-xs btn-danger" %>
+        </div>
+      </div>
+    </div>
+  </div>  
+<% end %>
+
+
+
+
+
+
+
+
