@@ -21,6 +21,7 @@ class ArticlesController < ApplicationController
     #render plain: params[:article].inspect
     #This displays the params hash data in the browser
     @article = Article.new(article_params)
+    @article.user = User.first
     #pulls the specified attributes from params with private method from bottom of page 
     if @article.save
       flash[:info] = "Article was successfully created"
