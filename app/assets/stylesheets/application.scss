@@ -165,8 +165,17 @@
   font-size: 1.2em;
 }
 
-.article-body {
-  
+.article-title .article-link {
+  text-decoration: none;
+  color: #f25c00;
+}
+
+.article-title .article-link:hover {
+  color: orange;
+}
+
+.article-index-meta {
+  margin-top: 15px;
 }
 
 /****End articles index.html.erb styles****/
