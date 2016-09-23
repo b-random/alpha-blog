@@ -64,7 +64,7 @@
   text-decoration: none;
 }
 
-/****End application.html.erb styles****/
+
 
 
 
@@ -122,7 +122,8 @@
 .home-jumbo:hover {
   background-color: $navbar-default-bg;
 }
-/****End home.html.erb styles****/
+
+
 
 
 
@@ -139,7 +140,7 @@
 
 
 
-/****End about.html.erb styles****/
+
 
 
 
@@ -155,7 +156,9 @@
 }
 
 
-/****End articles show.html.erb styles****/
+
+
+
 
 
 
@@ -178,4 +181,26 @@
   margin-top: 15px;
 }
 
-/****End articles index.html.erb styles****/
+
+/****Start users index.html.erb styles****/
+
+.listing {
+  list-style: none;
+}
+
+.padding-left {
+  padding-left: zero;
+}
+
+.user-title a {
+  text-decoration: none;
+  color: #f25c00;
+}
+
+.user-title a:hover {
+  color: orange;
+}
+
+.art-show-row {
+  padding-right: 44px;
+}/*fix centering for article/show.html.erb/user info */
