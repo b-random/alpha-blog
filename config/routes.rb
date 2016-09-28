@@ -9,6 +9,12 @@ Rails.application.routes.draw do
   #defaults to include RESTful methods
   
   get 'signup', to: 'users#new'
+  
+  get 'login', to: 'sessions#new'
+  post 'login', to: 'sessions#create'
+  delete 'logout', to: 'sessions#destroy'
+  
+  
   resources :users, except: [:new]
   # except :new because :new URL is /signup
   
