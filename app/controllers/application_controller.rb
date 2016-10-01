@@ -12,6 +12,7 @@ class ApplicationController < ActionController::Base
 
   def logged_in?
     !!current_user 
+    # bang bang is like asking true or false
   end
   
   def require_user

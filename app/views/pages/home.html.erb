@@ -5,7 +5,9 @@
         <h1 class="jumbo-one">ATL@S</h1>
         <h3 class="jumbo-two">A TCRoRDC BLOG</h3>
       </div>
-      <%= link_to "Sign up", "#", class: "btn btn-primary btn-lg btn-xlarge home-jumbo" %>
+      <% if !logged_in? %>
+        <%= link_to "Sign up", signup_path, class: "btn btn-primary btn-lg btn-xlarge home-jumbo" %>
+      <% end %>  
     </div>
   </div>
   
