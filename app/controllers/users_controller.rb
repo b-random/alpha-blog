@@ -20,7 +20,8 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
     if @user.save
-      flash[:info] = "Welcome to Atlas, #{@user.username}!"
+      session[:user_id] = @user.id
+      flash[:info] = "Welcome to the conversation, #{@user.username}"
       redirect_to user_path(@user)
     else
       render :new
