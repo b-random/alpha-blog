@@ -16,6 +16,7 @@ Rails.application.routes.draw do
   
   
   resources :users, except: [:new]
+  resources :categories, except: [:destroy]
   # except :new because :new URL is /signup
   
   # You can have the root of your site routed with "root"
