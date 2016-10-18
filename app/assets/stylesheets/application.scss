@@ -16,7 +16,7 @@
  @import "bootstrap";
 
  
- /****Start application.html.erb styles****/
+ /****Start layouts/application.html.erb styles****/
  html, body {
    height: 100vh;
    /*For sticky footer html and body elements cannot have padding or margins*/
@@ -38,7 +38,6 @@
   letter-spacing: -2px;
 } 
 
-
 /* Set the fixed height of the footer here */
 #footer {
   height: 80px;
@@ -51,13 +50,11 @@
 }
 
 .fp1 {
-  color: #fff;
   margin-top: 8px;
 }
 
 .fp2 {
   text-decoration: none;
-  color: #fff;
 }
 
 .fp2:hover {
@@ -67,14 +64,7 @@
 
 
 
-
-
-
-
-
-
-/****Start home.html.erb styles****/
-
+/****Start pages/home.html.erb styles****/
 #home-wrap {
   margin-bottom: 300px;
   margin-top: 100px;
@@ -126,9 +116,7 @@
 
 
 
-
-/****Start about.html.erb styles****/
-
+/****Start pages/about.html.erb styles****/
 .jumbo-about {
   height: 400px;
   background: #fff;
@@ -141,11 +129,7 @@
 
 
 
-
-
-
-/****Start articles show.html.erb styles****/
-
+/****Start articles/show.html.erb styles****/
 .article-actions {
   border-top: 1px solid orange;
   padding-top: 5px;
@@ -155,15 +139,7 @@
   margin-top: 0;
 }
 
-
-
-
-
-
-
-
-/****Start articles index.html.erb styles****/
-
+/****Start articles/index.html.erb styles****/
 .article-title {
   font-size: 1.2em;
 }
@@ -181,9 +157,15 @@
   margin-top: 15px;
 }
 
+/****Start articles/_form.html.erb styles****/
+.input_checkbox input {
+  width: auto !important;
+}/*PC configuration, needed occasionally*/
 
-/****Start users index.html.erb styles****/
 
+
+
+/****Start users/index.html.erb styles****/
 .listing {
   list-style: none;
 }
@@ -205,3 +187,22 @@
   padding-right: 44px;
 }/*fix centering for article/show.html.erb/user info */
 
+
+
+
+/****Start categories/_category.html.erb styles****/
+.category-badge {
+  background-color: #ffd699;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  font-weight: bold;
+}
+
+.category-name-badge {
+  color: #000066;
+}
+
+.category-name-badge:hover {
+  text-decoration: none;
+  color: #fff;
+}

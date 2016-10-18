@@ -1,1 +1,14 @@
-<h1>Each Category</h1>
+<h3 align="center"><%= "Category: " + @category.name %></h3>
+
+
+<div align="center">
+  <%= will_paginate @category_articles %>
+</div>  
+<!--Adds per page navigation-->
+
+<%= render 'articles/article', obj: @category_articles %>
+<!--Within the article partial, the article variable will refer to all the articles for a given category.-->
+
+<div align="center">
+  <%= will_paginate @category_articles %>
+</div>
