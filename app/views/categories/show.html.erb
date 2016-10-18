@@ -2,6 +2,11 @@
 
 
 <div align="center">
+  <% if logged_in? && current_user.admin? %>
+    <div>
+      <span class="badge cat-show-badge"><%= link_to "Edit Category Name", category_path(@category), class: 'category-name-badge' %></span>
+    </div>
+  <% end %>  
   <%= will_paginate @category_articles %>
 </div>  
 <!--Adds per page navigation-->
