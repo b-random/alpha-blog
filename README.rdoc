@@ -1,3 +1,3 @@
-This project was started as a means to a deeper understanding of many to many relationships between models.
+This mock-twitter project was started as a means to a deeper understanding of many to many relationships between models.
 
 Built w/o scaffolding
